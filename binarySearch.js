@@ -4,10 +4,13 @@ given an unique & ascending array of integers, please search for its index with 
 */
 
 const binarySearch = (arr, target) => {
+	// initialize variables
 	let left = 0
 	let right = arr.length - 1
 
+	// use left and right to examine the other sub-section of the array
 	while (left <= right) {
+		// used as a search key
 		const mid = Math.floor((left + right)) / 2
 
 		// target is mid
@@ -17,4 +20,7 @@ const binarySearch = (arr, target) => {
 			// target is in left side of mid
 		} left = mid + 1
 	}
+
+	// not found
+	return -1
 }
